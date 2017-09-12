@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  年:<input id="year" type="text" name="" value=""> 月:
+  <input id="mouns" type="text" name="" value=""> 日:
+  <input id="day" type="text" name="" value="">
+  <button id="btn" type="button" name="button">提交</button> 是今年的: <span id="show"></span>
+
+  <script type="text/javascript">
+    var year = document.getElementById('year');
+    var mons = document.getElementById('mouns');
+    var day = document.getElementById('day');
+    var btn = document.getElementById('btn');
+
+    btn.onclick = function() {
+      var jgy = Number(year.value);
+      var jgm = Number(mons.value);
+      var jgd = Number(day.value);
+
+
+      if (jgd > 31 || jgd < 1 || jgm < 1 || jgm > 12){
+        alert("error");
+      }
+
+      switch (jgm) {
+        case 1:
+          yue = 0;
+          break;
+        case 2:
+          yue = 31;
+          break;
+        case 3:
+          yue = 59;
+          break;
+        case 4:
+          yue = 90;
+          break;
+        case 5:
+          yue = 120;
+          break;
+        case 6:
+          yue = 151;
+          break;
+        case 7:
+          yue = 181;
+          break;
+        case 8:
+          yue = 212;
+          break;
+        case 9:
+          yue = 243;
+          break;
+        case 10:
+          yue = 273;
+          break;
+        case 11:
+          yue = 304;
+          break;
+        case 12:
+          yue = 334;
+          break;
+        
+      }
+      yue = yue + jgd
+      if ((jgy % 4 == 0 && jgy % 100 !== 0) || (jgy % 400 == 0)) {
+        i = 1
+      } else {
+        i = 0;
+      }
+      if (i == 1 && jgm > 2) {
+        yue = yue + 1
+      }
+      show.innerHTML = yue
+    }
+  </script>
+</body>
+
+</html>
