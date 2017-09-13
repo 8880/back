@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    输入:<input id="one"type="text" name="" value="">
+    <button id="btn" type="button" name="button">转换</button>
+    <h1>转化结果为:<span id="show"></span></h1>
+
+    <script type="text/javascript">
+    var input = document.getElementById('one');
+    var bth = document.getElementById('btn');
+    var show = document.getElementById('show');
+
+    btn.onclick = function () {
+      var result = input.value;
+      var c = Number(result)
+      function zh(c) {
+        var b = c.toString(2);
+        console.log(b);
+        show.innerHTML = b
+        return b;
+      }
+      zh(c)
+      // show.innerHTML = b;
+    }
+    </script>
+  </body>
+</html>
