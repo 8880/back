@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var startx, starty, endx, endy;
+      document.addEventListener('touchstart',function(event){
+        startx = event.touches[0].clientX;
+        starty = event.touches[0].clientY;
+      },false);
+
+      document.addEventListener("touchend", function(event){
+        endx = event.changedTouches[0].clientX;
+        endy = event.changedTouches[0].clientY;
+
+
+        if (Math.abs(endx - startx ) > Math.abs(endy - starty)) {
+          if ((endx - startx) > 0) {
+            alert('向右');
+          } else {
+            alert('向左');
+          }
+        } else {
+          if ((endy - starty) > 0) {
+            alert('向下');
+          } else {
+            alert('向上');
+          }
+        }
+      },false);
+
+
+
+
+    </script>
+  </body>
+</html>
