@@ -1,17 +1,18 @@
+<!DOCTYPE html>
 <html>
-<head>
-<script type="text/javascript">
-function getValue()
-  {
-  var x=document.getElementById("myHeader")
-  alert(x.innerHTML)
-  }
-</script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="btn">btn</button>
+    <script type="text/javascript">
+    var btn = document.getElementById("btn");
 
-<h1 id="myHeader" onclick="getValue()">This is a header</h1>
-<p>Click on the header to alert its value</p>
+      btn.onclick = function (){
+        console.log(event)
 
-</body>
+      }
+    </script>
+  </body>
 </html>
