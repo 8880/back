@@ -167,18 +167,20 @@
       var s1 = document.getElementById('s1');
 
       myslt.onclick = function(){
-        var index = myslt.selectedIndex; //获得下拉菜单里的元素索引值
-        var vle = myslt.options[index].value; //对应索引值元素里的value值
-        console.log(index);
-        console.log(vle);
+        // var index = myslt.selectedIndex; //获得下拉菜单里的元素索引值
+        // var vle = myslt.options[index].value; //对应索引值元素里的value值
+        var dd = myslt.value
+        // console.log(index);
+        // console.log(vle);
+        console.log(dd);
         var one = document.createElement('div');
         cnt.removeChild(cnt.firstElementChild);
 
-        im.style.backgroundPositionY = picture[index];
-        pc.style.width = star[index];
-        one.innerHTML = content[index];
+        im.style.backgroundPositionY = picture[dd];
+        pc.style.width = star[dd];
+        one.innerHTML = content[dd];
         cnt.appendChild(one);
-        cnt.style.color = col[index];
+        cnt.style.color = col[dd];
       }
 
 
