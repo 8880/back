@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .w {
+      width: 1226px;
+      margin: 0 auto;
+    }
+
+    .box-top {
+      background-color: #f5f5f5;
+      font-size: 22px;
+      font-weight: 200;
+      line-height: 58px;
+      color: #333;
+    }
+
+    .box-top ul {
+      float: right;
+      cursor: pointer;
+    }
+
+    .box-top ul li {
+      list-style: none;
+      margin: 0 0 0 30px;
+      float: left;
+      font-size: 16px;
+      height: 40px;
+    }
+
+    .box-left {
+      float: left;
+    }
+
+    .clearfix::after {
+      clear: both;
+      display: block;
+      content: "";
+    }
+
+
+    .box-right {
+      float: left;
+      width: 992px;
+      height: 618px;
+    }
+
+    .box-img {
+      background-color: #fff;
+      margin: 0 0 14px 14px;
+      width: 234px;
+      height: 300px;
+      float: left;
+      overflow: hidden;
+    }
+
+    .box-img img {
+      width: 150px;
+      height: 150px;
+      margin-left: 40px;
+      margin-top: 34px;
+    }
+
+    .last {
+      background-color: #f5f5f5;
+    }
+
+    .sm1 {
+      height: 143px;
+      background-color: #fff;
+    }
+
+    .sm2 {
+      height: 143px;
+      margin-top: 14px;
+      background-color: #fff;
+    }
+
+    .sm1 img {
+      width: 80px;
+      height: 80px;
+    }
+
+    h5 {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 100;
+      color: #333;
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+      color: #b0b0b0;
+    }
+
+    h6 {
+      text-align: center;
+      color: #ff6700;
+      font-size: 15px;
+      font-weight: 100;
+    }
+
+    .sm-1 {
+      float: left;
+      margin-top: 50px;
+      margin-left: 25px;
+    }
+
+    .sm-1 h6 {
+      text-align: left;
+    }
+
+    .xp {
+      position: absolute;
+      width: 64px;
+      height: 20px;
+      background: #83c44e;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      margin-left: 80px;
+    }
+
+    .tp {
+      box-shadow: 2px 2px 20px #777;
+      transform: translate(0px, -2px);
+      transition: all 0.5s;
+    }
+
+    .tpp {
+      transition: all 0.5s;
+    }
+
+    .tantu {
+      position: relative;
+      width: 234px;
+      background-color: #ff6700;
+      font-size: 13px;
+      height: 60px;
+      color: #fff;
+      bottom: -52px;
+      transition: all 0.5s;
+    }
+
+    .chu {
+      bottom: -4px;
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="w" class="w">
+    <div class="box-top">
+      <span>智能</span>
+      <ul id="nav">
+        <li value="0">热门</li>
+        <li value="1">出行</li>
+        <li value="2">健康</li>
+        <li value="3">酷玩</li>
+        <li value="4">路由器</li>
+      </ul>
+    </div>
+
+    <div id="left"class="box-left clearfix">
+      <img src="./image/1.jpg" width="234px" height="300px" alt=""><br>
+      <img src="./image/2.jpg" style="margin-top:10px" width="234px" height="300px" alt="">
+    </div>
+
+    <div id="right" class="box-right">
+      <div id="i1"class="box-img">
+        <div class="xp">新品</div>
+        <img src="./image/3.jpg" alt="">
+        <h5>70迈智能后视镜</h5>
+        <p>ADAS高级驾辅，1080P行车记录</p>
+        <h6>1299元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i2"class="box-img">
+        <img src="./image/4.jpg" alt="">
+        <h5>小米体脂秤</h5>
+        <p>简约纤薄，隐藏式 LED 显示屏</p>
+        <h6>199元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i3"class="box-img">
+        <img src="./image/5.jpg" alt="">
+        <h5>小方摄像机</h5>
+        <p>1080P 好清晰，看家看娃看宠物</p>
+        <h6>129元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i4"class="box-img">
+        <img src="./image/6.jpg" alt="">
+        <h5>米家IH电饭煲 3L</h5>
+        <p>IH 电磁环绕加热，3000+ 煮米方案</p>
+        <h6>199元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i5"class="box-img">
+        <img src="./image/7.jpg" alt="">
+        <h5>Yeelight床头灯</h5>
+        <p>触摸式操作体验，给卧室1600万种颜色</p>
+        <h6>249元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i6"class="box-img">
+        <div class="xp">新品</div>
+        <img src="./image/8.jpg" alt="">
+        <h5>米家小相机</h5>
+        <p>清晰捕捉美好瞬间</p>
+        <h6>699元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i7"class="box-img">
+        <div class="xp">新品</div>
+        <img src="./image/9.jpg" alt="">
+        <h5>小米路由器HD（8TB）</h5>
+        <p>全新一代智能家庭中心</p>
+        <h6>3699元</h6>
+        <div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>
+      </div>
+      <div id="i8"class="box-img">
+        <div class="last">
+          <div class="sm1">
+            <div class="sm-1">
+              <h5>小米VR眼镜</h5>
+              <h6>249元</h6>
+
+            </div>
+            <img src="./image/10.jpg" alt="">
+          </div>
+
+          <div class="sm2">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var nav = document.getElementById('nav');
+    var list = nav.getElementsByTagName('li');
+    var right = document.getElementById('right');
+    var w = document.getElementById('w');
+    var i2 = document.getElementById('i2');
+    var left = document.getElementById('left');
+    var tp = document.getElementsByClassName('tp');
+    var tantu = document.getElementsByClassName('tantu');
+
+    var chuxing = [
+      [  './image/3.jpg','70迈智能后视镜', 'ADAS高级驾辅，1080P行车记录', '1299元',
+        './image/4.jpg', '电助力折叠自行车', '力矩传感电助力，折叠便携设计', '2999元',
+        './image/5.jpg','小米米家对讲机', '8天超长待机，位置共享，FM收音机', '249元',
+        './image/6.jpg','米家车载空气净化器', '双风机循环气流，高效净化车内空气', '449元',
+        './image/7.jpg','Amazfit 运动手表', '蓝牙听歌，运动心率，智能通知提醒', '799元',
+        './image/8.jpg','小蚁微单相机M1双镜头套机', '2016 万有效像素，4K视频录制', '2999元',
+        './image/9.jpg','小米手环2', 'OLED 显示屏幕，升级计步算法', '149元',
+        './image/10.jpg','米家车载空气净化器', '双风机循环气流，高效净化车内空气', '449元',
+     ],
+     [  './image/21.jpg','小米米家电动滑板车', '极简几何设计，1 分钟轻松上手', '1999元',
+       './image/22.jpg', '电助力折叠自行车', '力矩传感电助力，折叠便携设计', '2999元',
+       './image/23.jpg','小米米家对讲机', '8天超长待机，位置共享，FM收音机', '249元',
+       './image/24.jpg','米家车载空气净化器', '双风机循环气流，高效净化车内空气', '449元',
+       './image/25.jpg','Amazfit 运动手表', '蓝牙听歌，运动心率，智能通知提醒', '799元',
+       './image/26.jpg','小蚁微单相机M1双镜头套机', '2016 万有效像素，4K视频录制', '2999元',
+       './image/27.jpg','小米手环2', 'OLED 显示屏幕，升级计步算法', '149元',
+       './image/28.jpg','米家车载空气净化器', '双风机循环气流，高效净化车内空气', '449元',
+     ],
+     []
+   ];
+
+    // for (var i = 0; i < list.length; i++) {
+    //   console.log(list[i]);
+    //   list[i].onmouseover = function(){
+    //     console.log(i);
+    //     this.style.cssText =  'border-bottom: none;'
+    //     this.style.cssText = 'border-bottom: 2px solid #ff6700; color: #ff6700'
+    //
+    //   }
+    // }
+    //
+    // for (var i = 0; i < list.length; i++) {
+    //   list[i].onmouseout = function(){
+    //     this.style.cssText =  'border-bottom: none;'
+    //   }
+    // }
+
+    //悬浮导航内容切换部分
+    nav.onmouseover = function(e) {
+      var target = e.target
+      if (target.tagName === "LI") {
+        target.style.cssText = 'border-bottom: 2px solid #ff6700; color: #ff6700'
+        i1.innerHTML = '<img src="'+ chuxing[target.value][0] + '"><h5>'+ chuxing[target.value][1] + '</h5><p>'+ chuxing[target.value][2] + '</p><h6>'+ chuxing[target.value][3] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>' ;
+        right.insertBefore(i1,i2);
+        i2.innerHTML = '<img src="'+ chuxing[target.value][4] + '"><h5>'+ chuxing[target.value][5] + '</h5><p>'+ chuxing[target.value][6] + '</p><h6>'+ chuxing[target.value][7] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i2,i3);
+        i3.innerHTML = '<img src="'+ chuxing[target.value][8] + '"><h5>'+ chuxing[target.value][9] + '</h5><p>'+ chuxing[target.value][10] + '</p><h6>'+ chuxing[target.value][11] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i3,i4);
+        i4.innerHTML = '<img src="'+ chuxing[target.value][12] + '"><h5>'+ chuxing[target.value][13] + '</h5><p>'+ chuxing[target.value][14] + '</p><h6>'+ chuxing[target.value][15] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i4,i5);
+        i5.innerHTML = '<img src="'+ chuxing[target.value][16] + '"><h5>'+ chuxing[target.value][17] + '</h5><p>'+ chuxing[target.value][18] + '</p><h6>'+ chuxing[target.value][19] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i5,i6);
+        i6.innerHTML = '<img src="'+ chuxing[target.value][20] + '"><h5>'+ chuxing[target.value][21] + '</h5><p>'+ chuxing[target.value][22] + '</p><h6>'+ chuxing[target.value][23] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i6,i7);
+        i7.innerHTML = '<img src="'+ chuxing[target.value][24] + '"><h5>'+ chuxing[target.value][25] + '</h5><p>'+ chuxing[target.value][26] + '</p><h6>'+ chuxing[target.value][27] + '</h6><div class="tantu">瞬间高大上啊有木有？买个专用支架全程自己安装，小迈你...</div>';
+        right.insertBefore(i7,i8);
+      }
+    }
+
+    nav.onmouseout = function(e) {
+      var target = e.target
+      if (target.tagName.toLowerCase() === "li") {
+        target.style.cssText = 'border-bottom: none'
+      }
+    }
+
+
+    //左边图片悬浮部分
+    left.onmouseover = function(e){
+      var target = e.target
+
+      if (target.tagName === "IMG") {
+        target.className = 'tp';
+
+      }
+    }
+
+    left.onmouseout = function(e){
+      var target = e.target
+
+      if (target.tagName === "IMG") {
+        target.className = 'tpp';
+      }
+    }
+
+    // 图片里弹出内容
+
+    right.onmouseover = function(e){
+      var target = e.target
+        if (target.className == 'box-img') {
+          console.log('111');
+        target.style.cssText = 'box-shadow: 2px 2px 20px #777;transform: translate(0px, -2px),transition: all 0.5s;'
+      }
+    }
+
+    right.onmouseover = function(e){
+      var target = e.target
+        if (target.className == 'box-img') {
+        target.style.cssText = 'box-shadow: 2px 2px 20px #777;transform: translate(0px, -2px);transition: all 0.5s;'
+        target.lastElementChild.style.cssText = 'bottom: -4px; transition: all 0.5s;'
+      }
+
+      if (target.tagName == 'IMG' || target.tagName == 'H5' || target.tagName == 'P'||target.tagName == 'H6') {
+        target.parentNode.style.cssText = 'box-shadow: 2px 2px 20px #777;transform: translate(0px, -2px);transition: all 0.5s;'
+        target.parentNode.lastElementChild.style.cssText = 'bottom: -4px; transition: all 0.5s;'
+      }
+    }
+    right.onmouseout = function(e){
+      var target = e.target
+      if (target.className == 'box-img') {
+      target.style.cssText = 'box-shadow: 0;transform: translate(0px, 0px);transition: all 0.5s;'
+      target.lastElementChild.style.cssText = 'position: relative;width: 234px;background-color: #ff6700;color: #fff;bottom: -52px;transition: all 0.5s;'
+    }
+
+    if (target.tagName == 'IMG' || target.tagName == 'H5' || target.tagName == 'P'||target.tagName == 'H6') {
+      target.parentNode.style.cssText = 'box-shadow: 0;transform: translate(0px, 0px);transition: all 0.5s;'
+      target.parentNode.lastElementChild.style.cssText = 'position: relative;width: 234px;background-color: #ff6700;color: #fff;bottom: -52px;transition: all 0.5s;'
+
+    }
+    }
+
+  </script>
+</body>
+
+</html>
