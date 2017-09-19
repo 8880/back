@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>sss</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var title = document.getElementsByTagName('title')[0];
+
+      var tt = ['1', '2', '3', '4']
+      var i = 0;
+      function cou(){
+
+        if (i == 4 ) {
+          i = 0;
+        }
+
+        title.innerHTML = tt[i];
+        i++;
+        setTimeout(cou, 2000);
+      }
+
+      cou()
+
+
+    </script>
+  </body>
+</html>
