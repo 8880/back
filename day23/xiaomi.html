@@ -58,6 +58,7 @@
     }
 
     .box-img {
+      position: relative;
       background-color: #fff;
       margin: 0 0 14px 14px;
       width: 234px;
@@ -145,13 +146,13 @@
     }
 
     .tantu {
-      position: relative;
+      position: absolute;
       width: 234px;
       background-color: #ff6700;
       font-size: 13px;
-      height: 60px;
+      height: 0px;
       color: #fff;
-      bottom: -52px;
+      bottom: 0px;
       transition: all 0.5s;
     }
 
@@ -239,7 +240,6 @@
             <div class="sm-1">
               <h5>小米VR眼镜</h5>
               <h6>249元</h6>
-
             </div>
             <img src="./image/10.jpg" alt="">
           </div>
@@ -362,24 +362,24 @@
       var target = e.target
         if (target.className == 'box-img') {
         target.style.cssText = 'box-shadow: 2px 2px 20px #777;transform: translate(0px, -2px);transition: all 0.5s;'
-        target.lastElementChild.style.cssText = 'bottom: -4px; transition: all 0.5s;'
+        target.lastElementChild.style.cssText = 'height:70px; transition: all 0.5s;'
       }
 
       if (target.tagName == 'IMG' || target.tagName == 'H5' || target.tagName == 'P'||target.tagName == 'H6') {
         target.parentNode.style.cssText = 'box-shadow: 2px 2px 20px #777;transform: translate(0px, -2px);transition: all 0.5s;'
-        target.parentNode.lastElementChild.style.cssText = 'bottom: -4px; transition: all 0.5s;'
+        target.parentNode.lastElementChild.style.cssText = 'height:70px; transition: all 0.5s;'
       }
     }
     right.onmouseout = function(e){
       var target = e.target
       if (target.className == 'box-img') {
       target.style.cssText = 'box-shadow: 0;transform: translate(0px, 0px);transition: all 0.5s;'
-      target.lastElementChild.style.cssText = 'position: relative;width: 234px;background-color: #ff6700;color: #fff;bottom: -52px;transition: all 0.5s;'
+      target.lastElementChild.style.cssText = 'position: absolute;width: 234px;background-color: #ff6700;color: #fff;height:0px; bottom: 0px;transition: all 0.5s;'
     }
 
     if (target.tagName == 'IMG' || target.tagName == 'H5' || target.tagName == 'P'||target.tagName == 'H6') {
       target.parentNode.style.cssText = 'box-shadow: 0;transform: translate(0px, 0px);transition: all 0.5s;'
-      target.parentNode.lastElementChild.style.cssText = 'position: relative;width: 234px;background-color: #ff6700;color: #fff;bottom: -52px;transition: all 0.5s;'
+      target.parentNode.lastElementChild.style.cssText = 'position: absolute;width: 234px;background-color: #ff6700;color: #fff;height:0px; bottom: 0px;transition: all 0.5s;'
 
     }
     }

@@ -9,9 +9,9 @@
     <script type="text/javascript">
     var btn = document.getElementById("btn");
 
-    document.addEventListener('click', function(event){
-      console.log(event.target);
-    }, false)
+      (function(i){
+        console.log(i);
+      })(2)
     </script>
   </body>
 </html>
