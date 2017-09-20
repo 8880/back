@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>clock</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        position: relative;
+        margin: 100px 550px;
+        height: 600px;
+        width: 600px;
+        background: url('./clock/clock.jpg') no-repeat;
+      }
+      .sz {
+        position: absolute;
+        height: 600px;
+        width: 30px;
+        left: 285px;
+        background: url('./clock/hour.png') no-repeat;
+      }
+      .fz {
+        position: absolute;
+        height: 600px;
+        width: 30px;
+        left: 285px;
+        background: url('./clock/minute.png') no-repeat;
+      }
+      .mz {
+        position: absolute;
+        height: 600px;
+        width: 30px;
+        left: 285px;
+        background: url('./clock/second.png') no-repeat;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="sz"></div>
+      <div class="fz"></div>
+      <div class="mz"></div>
+    </div>
+
+    <script type="text/javascript">
+      var mz = document.getElementsByClassName('mz')[0];
+      var fz = document.getElementsByClassName('fz')[0];
+      var sz = document.getElementsByClassName('sz')[0];
+
+
+
+      setInterval(function(){
+
+        var d = new Date();
+        var miao = d.getSeconds();
+        var fen = d.getMinutes();
+        var shi = d.getHours();
+        mz.style.cssText = "transform: rotate("+ miao*6 +"deg)"
+        fz.style.cssText = "transform: rotate("+ (shi*3600+fen*60+miao)*6/60 +"deg)"
+        sz.style.cssText = "transform: rotate("+ ((shi*3600+fen*60+miao)*6/60)/12+"deg)"
+
+      },500)
+
+    </script>
+  </body>
+</html>

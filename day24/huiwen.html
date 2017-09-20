@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>回文</title>
+</head>
+
+<body>
+  输入:<input id="ipt" type="text" value="">
+  <button id="btn" type="button" name="button">提交</button>
+
+  <script type="text/javascript">
+
+    var ipt = document.getElementById('ipt');
+    var btn = document.getElementById('btn')
+    var str;
+
+    function hu(str) {
+
+      var b = str.split('').reverse().join('')
+
+      if (str === b) {
+        alert('yes')
+      } else {
+        alert('no')
+      }
+    }
+
+    btn.onclick = function(){
+      str = ipt.value;
+      hu(str)
+    }
+
+
+
+  </script>
+</body>
+
+</html>
