@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function hh(a){
+        if (a % 2 == 0) {
+          for(;;){
+            a /= 2
+            if (a == 1) {
+              console.log('true');
+              break;
+            } if (a < 1) {
+              console.log('false');
+              break;
+            }
+          }
+        } else {
+          console.log('false')
+        }
+
+      }
+
+      hh(16)
+    </script>
+  </body>
+</html>

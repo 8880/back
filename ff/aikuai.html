@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ikuai</title>
+  <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+  <style media="screen">
+
+  @keyframes run {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-1200px);
+
+    }
+  }
+
+  @keyframes color {
+    0% {
+      opacity: 0.1;
+    }
+
+    60% {
+      opacity: 0.2;
+    }
+
+    80% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+
+    }
+  }
+
+  @keyframes big {
+    0% {
+      transform: scale(4, 4);
+      opacity: 0.1;
+    }
+
+
+    100% {
+      transform: scale(1, 1);
+      opacity: 1;
+
+    }
+  }
+
+  @keyframes bo {
+    0% {
+      opacity: 0.1;
+      transform: translateY(-250px);
+
+    }
+
+    90% {
+      transform: translateY(-10px);
+
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes bo2 {
+    0% {
+      transform: translateY(200px);
+        opacity: 0.1;
+    }
+
+    90% {
+      transform: translateY(10px);
+
+    }
+    100% {
+        opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes ys {
+    0% {
+      transform: translateY(-50px);
+        opacity: 0.2;
+    }
+
+    10% {
+      opacity: 1;
+      transform: translateY(0px);
+
+    }
+    80% {
+      opacity: 1;
+      transform: translateY(0px);
+
+    }
+    90% {
+      opacity: 0.1;
+      transform: translateY(0px);
+
+    }
+
+    100% {
+        opacity: 0.1;
+      transform: translateY(0px);
+    }
+  }
+
+    .navbar-inverse {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: transparent;
+    }
+
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .navbar-right li>a.btn {
+      background-color: transparent;
+      color: #9b9b9b;
+      border: 1px solid #9b9b9b;
+      text-shadow: none;
+      opacity: 0.8;
+    }
+
+    .navbar-right li a {
+      float: none;
+      padding: 4px 15px;
+      margin: 0 5px;
+      line-height: 23px;
+      font-weight: 700;
+    }
+
+    .bot {
+      margin-top: 13px;
+    }
+
+    .bot li:hover a {
+      color: #666 !important;
+    }
+
+    .bbj {
+      margin-left: 45px;
+    }
+
+    .bbj li:hover {
+      background-color: #0088cc;
+      color: #fff;
+    }
+
+    .bbj a:focus {
+      color: #9d9d9d !important;
+    }
+
+    .thumbnail {
+      border: none;
+      padding: 0;
+    }
+
+    p {
+      color: #5f5f5f;
+      font-size: 20px;
+      line-height: 180%;
+      padding: 10px;
+    }
+
+    h3 {
+      font-size: 36px;
+      font-weight: normal;
+      color: #0088cc;
+    }
+
+
+    .hz {
+
+      padding-left: 80px;
+    }
+
+    .b3 {
+      background-color: #eeeeee;
+    }
+
+    .bj {
+      margin: 50px 0;
+    }
+
+    .b5 {
+      height: 660px;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+      background-image: url('./img/7.jpg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .ggg {
+      text-align: center;
+      margin-top: 260px;
+    }
+
+    .ps {
+      color: #0088cc;
+      font-size: 16px;
+      padding: 0;
+      margin: 0px;
+      margin-top: 20px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #bac1c8;
+      font-size: 12px;
+      padding: 20px 0;
+    }
+
+    .footfz {
+      padding-top: 0;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .footfz span {
+      font-size: 14px;
+      line-height: 30px;
+    }
+
+    .footfz a {
+      color: #bac1c8;
+    }
+
+    .footfz h2 {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .footfz p {
+      color: #bac1c8;
+      font-size: 14px;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+    }
+
+    .bbj li {
+      height: 28px;
+    margin-top: 12px;
+    border-radius: 4px;
+        margin-right: 5px;
+    }
+
+    .bbj a {
+      margin-top: -11px;
+    }
+
+    .tp {
+      background: url('./img/3.jpg') no-repeat;
+      width: 100%;
+      height: 962px;
+      background-attachment: fixed;
+      overflow: hidden;
+   }
+
+   .tp1 {
+     position: relative;
+     height: 962px;
+     overflow: hidden;
+  }
+
+  .l1 {
+    position: absolute;
+    background: url('./img/download.png') no-repeat 0px 0px/3621px;
+    width:200%;
+    height: 300px;
+    bottom: 0;
+    animation: run 30s linear infinite;
+
+  }
+
+  .l2 {
+    position: absolute;
+    background: url('./img/download 2.png') no-repeat 0px 0px/3621px;
+    width:100%;
+    height: 313px;
+    bottom: 0;
+    animation: run 25s linear infinite;
+  }
+
+  .l3 {
+    position: absolute;
+    background: url('./img/download 3.png') no-repeat 0px 0px/3621px;
+    width:200%;
+    height: 300px;
+    bottom: 0;
+    animation: run 20s linear infinite;
+
+  }
+  .w1 {
+    position: absolute;
+    background: url(./img/w1.png) no-repeat 0px 0px/50px;
+    width: 15%;
+    height: 50px;
+    left: 680px;
+    bottom: 82px;
+    animation: ys 10s linear infinite;
+
+  }
+
+  .w2 {
+    position: absolute;
+    background: url(./img/w2.png) no-repeat 0px 0px/50px;
+    width: 15%;
+    height: 50px;
+    left: 880px;
+    bottom: 92px;
+    animation: ys 15s linear infinite;
+
+  }
+
+  .w3 {
+    position: absolute;
+    background: url(./img/w3.png) no-repeat 0px 0px/50px;
+    width: 15%;
+    height: 50px;
+    left: 980px;
+    bottom: 230px;
+    animation: ys 12s linear infinite;
+
+  }
+
+  .w4 {
+    position: absolute;
+    background: url(./img/w4.png) no-repeat 0px 0px/50px;
+    width: 15%;
+    height: 50px;
+    left: 1690px;
+    bottom: 130px;
+    animation: ys 11s linear infinite;
+
+  }
+  .q1 {
+    position: absolute;
+    background: url("./img/q1.png") no-repeat 0px 0px/230px;
+    width: 17%;
+    height: 75px;
+    left: 380px;
+    top: 280px;
+    animation: bo 1s linear ;
+
+  }
+
+  .q2 {
+    position: absolute;
+    background: url("./img/q2.png") no-repeat 0px 0px/230px;
+    width: 15%;
+    height: 50px;
+    left: 380px;
+    top: 340px;
+    animation: bo2 1.5s linear ;
+
+  }
+
+   .tp img:nth-child(1) {
+     width: 400px;
+     height: 200px;
+      margin-top: 100px;
+      margin-left: 300px;
+      animation: color 2s linear ;
+
+   }
+   .tp img:nth-child(2) {
+     width: 600px;
+     height: 250px;
+    margin-top: 100px;
+    animation: color 2s linear ;
+
+   }
+   .tp img:nth-child(3) {
+     width: 100px;
+     height: 100px;
+     margin-left: 100px;
+
+   }
+   .tp img:nth-child(4) {
+     width: 500px;
+     height: 300px;
+     margin-left: 300px;
+     animation: big 1s linear;
+   }
+
+   .tp img:nth-child(5) {
+     width: 200px;
+     height: 200px;
+
+   }
+   .tp img:nth-child(6) {
+
+     width: 700px;
+     height: 200px;
+     margin-left: 100px;
+     animation: color 3s linear ;
+
+   }
+   .tp img:nth-child(7) {
+
+     width: 900px;
+     height: 200px;
+     margin-left: 200px;
+   }
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 导航部分 -->
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div style="float:left"><a href="#"><img src="./img/1.png" style="margin-top:3px;width:213px;height:34px"alt=""></a></div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+      </div>
+      <ul class="nav navbar-nav navbar-right bot">
+        <li><a class="btn" href="#">爱快云</a></li>
+        <li><a class="btn" href="">爱快论坛</a></li>
+      </ul>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav bbj">
+          <li style="background-color: #0088cc;"><a style="color:#fff;" href="#">首页</a></li>
+          <li><a href="#">固件下载</a></li>
+          <li><a href="#">爱快硬件</a></li>
+          <li><a href="#">技术支持</a></li>
+          <li><a href="#">渠道合作</a></li>
+          <li><a href="#">场景案例</a></li>
+          <li><a href="#">OEM定制</a></li>
+          <li><a href="#">Language</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- 轮播图片部分 -->
+  <div class="slideshow">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="tp1">
+              <div class="l1"></div>
+              <div class="l2"><div class="w1"></div><div class="w3"></div></div>
+              <div class="l3"><div class="w2"></div><div class="w4"></div></div>
+              <div class="q1"></div>
+              <div class="q2"></div>
+              <div class="w5"></div>
+              <div class="w6"></div>
+              <div class="w7"></div>
+              <div class="w8"></div>
+            </div>
+            <div class="carousel-caption">
+
+            </div>
+          </div>
+          <div class="item">
+            <div class="tp">
+              <img src="./img/ss.png" alt="">
+              <img src="./img/ss1.png" alt="">
+              <img src="./img/ss3.png" alt="">
+              <img src="./img/x.png" alt="">
+              <img src="./img/ss4.png" alt="">
+              <img src="./img/ss2.png" alt="">
+              <img src="./img/ss5.png" alt="">
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  <!-- 第二部分 -->
+  <div class="b2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <div class="thumbnail" href="#"><img src="./img/4.png" alt=""></div>
+        </div>
+        <div style="padding-top:100px;" class="col-md-4 col-sm-4">
+          <div class="hz">
+            <h3>超赞的云系统</h3>
+            <p>
+              云平台集中管理 <br> 智能云AC
+              <br> Portal认证配置 <br> 图形化数据体现
+              <br> 自定义JS通知插入
+              <br> 第三方认证接口
+              <br>
+            </p>
+            <p style="font-size: 18px;color: #0088cc;">更多,待你发现 ...
+              <p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- 第三部分 -->
+  <div class="b3">
+    <div class="container">
+      <div class="bj">
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+            <div style="padding-top:100px;" class="">
+              <h3>七层DPI流量管理</h3>
+              <p>
+                看网页、看电影、玩游戏互不干扰<br> 多台终端同时上网不卡
+                <br> 带宽利用最大化，绝不浪费带宽
+                <br> 永远告别延迟卡顿
+                <br> 3000款+应用识别
+                <br>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <div class="thumbnail" href="#"><img style="background-color:#eeeeee" src="./img/5.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 第四部分 -->
+  <div class="b4">
+    <div class="container">
+      <div style="margin:50px 0px;" class="row">
+        <div class="col-md-8 col-sm-8">
+          <div class="thumbnail" href="#"><img src="./img/6.png" alt=""></div>
+        </div>
+        <div style="padding-top:100px;" class="col-md-4 col-sm-4">
+          <div class="hz">
+            <h3>五大功能</h3>
+            <p>
+              多线路由<br> 一键流控
+              <br> 免费AC管理
+              <br> 图形化数据体现
+              <br> 自定义微信认证
+              <br> 集中云管理
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 第五部分 -->
+  <div class="b5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ggg">
+            <h3>开放尽显开放</h3>
+            <p>
+              Portal认证页面自定义<br> 云数据API+认证SDK
+              <br> 从数据到应用，从应用到底层的开放之旅
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 第六部分 -->
+  <div class="b6">
+    <div class="container">
+      <div style="margin:50px;" class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/8.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">云系统</p>
+            <span>在线管理您所拥有的所有路由器</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/9.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">数据可视化</p>
+            <span>从终端到流量，所有数据通过图表一眼尽观</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:50px;" class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/10.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">卓越的优先级</p>
+            <span>保障关键应用无论何时，都可优先通过</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/11.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">应用行为管理</p>
+            <span>基于DPI的应用行为管理</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:50px;" class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/12.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">网址跳转</p>
+            <span>精准跳转、参数替换在最底层轻松搞定</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/13.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">插入JS通知</p>
+            <span>无论插入通知还是JS代码，总让您轻松完成</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin:50px;" class="row">
+        <div class="col-md-6 col-sm-6">
+          <div class="col-md-3 col-sm-3">
+            <img src="./img/14.png" alt="">
+          </div>
+          <div class="col-md-9 col-sm-9">
+            <p class="ps">更多惊喜，待您体验</p>
+            <span>尊崇用户需求导向，做最接地气的路由企业</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 尾部 -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-8">
+          <div class="col-md-4 col-sm-4">
+            <div class="footfz">
+              <h2>技术服务</h2>
+              <span><a href="">技术论坛</a></span><br>
+              <span><a href="">技术教程</a></span><br>
+              <span><a href="">技术咨询</a></span><br>
+              <span><a href="">售后服务</a></span><br>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="footfz">
+              <h2>渠道合作</h2>
+              <span><a href="">合作方式</a></span><br>
+              <span><a href="">投诉邮箱</a></span><br>
+              <span><a href="">各区域负责人</a></span><br>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="footfz">
+              <h2>关于爱快</h2>
+              <span><a href="">爱快介绍</a></span><br>
+              <span><a href="">公司动态</a></span><br>
+              <span><a href="">联系我们</a></span><br>
+              <span><a href="">爱快官方技术博客</a></span><br>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 25px;" class="col-md-4">
+          <div class="col-md-9">
+            <div class="footfz">
+              <h1 style="font-size:31.5px; margin-bottom: 0;">400-877-3227</h1>
+              <p>技术支持电话</p>
+              <p style="margin-top: -5px;">周一至周五 9:00 - 20:30</p>
+              <p style="margin-top: 6px;">QQ交流群：108636278</p>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <img style="margin-left: -38px;margin-top:25px;" width="98px" height="98px" src="./img/15.png" alt=""><br>
+            <h5 style=" margin-left: -34px; font-size:15px;">关注官方微信</h5>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;" class="row">
+        <div class="col-md-12">
+          <span style="font-size:14px;">Copyright © 2012 - 2017 iKuai. All Rights Reserved. 京ICP备13042604号 </span>
+        </div>
+      </div>
+
+      <div style="text-align:center ;margin-top: 15px;" class="row">
+        <div class="col-md-12">
+          <span style="font-size:14px;">版权所有 全讯汇聚网络科技（北京）有限公司</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
