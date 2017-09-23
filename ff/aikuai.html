@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ikuai</title>
@@ -276,7 +275,7 @@
     }
 
     .tp {
-      background: url('./img/3.jpg') no-repeat;
+      background: url('./img/3.jpg') no-repeat no-repeat;
       width: 100%;
       height: 962px;
       background-attachment: fixed;
@@ -291,37 +290,39 @@
 
   .l1 {
     position: absolute;
-    background: url('./img/download.png') no-repeat 0px 0px/3621px;
+    background: url('./img/download.png') no-repeat 0px 0px/100% 380px;
+    background-position: bottom;
     width:200%;
-    height: 300px;
+    height: 380px;
     bottom: 0;
-    animation: run 30s linear infinite;
-
+    animation: run 55s linear infinite;
   }
 
   .l2 {
     position: absolute;
-    background: url('./img/download 2.png') no-repeat 0px 0px/3621px;
-    width:100%;
+    background: url('./img/download 2.png') no-repeat 0px 0px/100% 313px;
+    background-position: bottom;
+    width:200%;
     height: 313px;
     bottom: 0;
-    animation: run 25s linear infinite;
+    animation: run 40s linear infinite;
   }
 
   .l3 {
     position: absolute;
-    background: url('./img/download 3.png') no-repeat 0px 0px/3621px;
+    background: url('./img/download 3.png') no-repeat 0px 0px/100% 300px;
+    background-position: bottom;
     width:200%;
     height: 300px;
     bottom: 0;
-    animation: run 20s linear infinite;
+    animation: run 35s linear infinite;
 
   }
   .w1 {
     position: absolute;
-    background: url(./img/w1.png) no-repeat 0px 0px/50px;
-    width: 15%;
-    height: 50px;
+    background: url(./img/w1.png) no-repeat 0px 0px/100%;
+    width: 70px;
+    height: 60px;
     left: 680px;
     bottom: 82px;
     animation: ys 10s linear infinite;
@@ -341,11 +342,11 @@
 
   .w3 {
     position: absolute;
-    background: url(./img/w3.png) no-repeat 0px 0px/50px;
+    background: url(./img/w3.png) no-repeat 0px 0px/55px;
     width: 15%;
-    height: 50px;
+    height: 55px;
     left: 980px;
-    bottom: 230px;
+    bottom: 248px;
     animation: ys 12s linear infinite;
 
   }
@@ -358,6 +359,39 @@
     left: 1690px;
     bottom: 130px;
     animation: ys 11s linear infinite;
+
+  }
+
+  .w5 {
+    position: absolute;
+    background: url(./img/w4.png) no-repeat 0px 0px/75px;
+    width: 15%;
+    height: 65px;
+    left: 440px;
+    bottom: 50px;
+    animation: ys 15s linear infinite;
+
+  }
+
+  .w6 {
+    position: absolute;
+    background: url(./img/w5.png) no-repeat 0px 0px/70px;
+    width: 15%;
+    height: 65px;
+    left: 1440px;
+    bottom: 100px;
+    animation: ys 20s linear infinite;
+
+  }
+
+  .w7 {
+    position: absolute;
+    background: url(./img/w6.png) no-repeat 0px 0px/80px;
+    width: 15%;
+    height: 85px;
+    left: 1883px;
+    bottom: 60px;
+    animation: ys 30s linear infinite;
 
   }
   .q1 {
@@ -481,14 +515,11 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <div class="tp1">
-              <div class="l1"></div>
-              <div class="l2"><div class="w1"></div><div class="w3"></div></div>
-              <div class="l3"><div class="w2"></div><div class="w4"></div></div>
+              <div class="l1"><div class="w7"></div></div>
+              <div class="l2"><div class="w1"></div><div class="w3"></div><div class="w6"></div></div>
+              <div class="l3"><div class="w2"></div><div class="w4"></div><div class="w5"></div></div>
               <div class="q1"></div>
               <div class="q2"></div>
-              <div class="w5"></div>
-              <div class="w6"></div>
-              <div class="w7"></div>
               <div class="w8"></div>
             </div>
             <div class="carousel-caption">
