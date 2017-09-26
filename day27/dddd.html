@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>原型链继承</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+
+    function Person(){
+       ddd = 'ddd';
+    }
+
+    Person.prototype.sayHello = function () {
+      console.log("你好，我是。。。");
+    };
+
+
+    function Student(){
+
+    }
+
+    Student.prototype = new Person();
+    Student.prototype.constructor = Student;
+    // console.log(Student.prototype);
+
+
+    //添加自己的原型方法
+    Student.prototype.exam = function(){
+      console.log("exam ......");
+    }
+
+
+    var stu1 = new Student();
+
+    console.log(stu1);
+    console.log(stu1.ddd);
+
+    stu1.sayHello();
+    stu1.exam();
+
+    </script>
+
+  </body>
+</html>
