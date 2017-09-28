@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      function dd (str){
+        var gg = /&hobby=([\w]+)/g;
+        var list = []
+        var result = str.replace(gg, function(match, p1){
+          list.push(p1)
+          return '';
+        })
+        console.log(list);
+        return result + '&hobby=' + list;
+
+
+      }
+      console.log(dd("name=lisi&age=10&hobby=eat&score=88&hobby=read&hobby=drink"));
+
+    </script>
+  </body>
+</html>

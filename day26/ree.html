@@ -7,25 +7,14 @@
   <body>
     <script type="text/javascript">
 
-      function hh(a){
-        if (a % 2 == 0) {
-          for(;;){
-            a /= 2
-            if (a == 1) {
-              console.log('true');
-              break;
-            } if (a < 1) {
-              console.log('false');
-              break;
-            }
-          }
-        } else {
-          console.log('false')
-        }
-
+      var fun = function gg(){
+        return 23;
       }
 
-      hh(16)
+      console.log(typeof fun);
+      console.log(typeof fun());
+      console.log(typeof gg);
+      console.log(typeof gg());
     </script>
   </body>
 </html>

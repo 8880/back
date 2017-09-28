@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    搜索: <input id="ipt" type="text" name="" value="" placeholder="请输入邮箱">
+    <button id='btn' type="button" name="button">提交</button>
+    <div id="div"></div>
+    <script type="text/javascript">
+    var ipt = document.getElementById('ipt');
+    var btn = document.getElementById('btn');
+    var div = document.getElementById('div');
+    var zc = /^([\w])+@([0-9a-zA-Z])+\.([a-zA-Z]{2,3})$/g
+
+    //test 与exec相似第一次匹配成功下一次从上次开始, 去掉g即可 或在写一遍
+    btn.onclick = function(){
+      var it = ipt.value
+
+      if (zc.test(it)) {
+        div.innerHTML = '正确';
+        console.log(zc.test(it));
+
+      }
+      else {
+        div.innerHTML = '格式错误';
+      };
+
+    };
+
+    </script>
+  </body>
+</html>
