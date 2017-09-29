@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       #box {
+         width: 100px;
+         height: 100px;
+         background-color: red;
+         position: absolute;
+         top: 100px;
+         left: 0;
+       }
+    </style>
+  </head>
+  <body>
+    <button id="forward">前进</button>
+    <button id="backward">后退</button>
+
+    <div id="box"></div>
+
+    <script type="text/javascript">
+
+    var forward = document.getElementById("forward");
+    var backward = document.getElementById("backward");
+    var box = document.getElementById("box");
+    var timer, sum=1000;
+
+    var timer=null;
+        function moveto(obj,itarget){
+                clearInterval(timer);
+                timer=setInterval(function(){
+                    var speed=0;
+                    if(obj.offsetLeft<itarget){//通过位移量除以10，使speed递减，实现减速停止。   乘以10则为加速。通过乘除的数字，控制快慢
+                        speed=(itarget-obj.offsetLeft)/100;
+                    }else{
+                        speed=-(obj.offsetLeft-itarget)/100;
+                    }
+                    speed=speed>0?Math.ceil(speed):Math.floor(speed);//取整，解决最后不足1px的位移量被忽略的问题
+                    if(obj.offsetLeft==itarget){
+                        clearInterval(timer);
+                    }else{
+                        obj.style.left=obj.offsetLeft+speed+'px';
+                    };
+
+                },30);
+        }
+    forward.onclick = function(){
+      moveto(box, 1600)
+    }
+
+    backward.onclick = function(){
+      move(box, -50, 50, 0)
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bk {
+        background: url(./heart_beat/search-bg.png) ;
+        height: 380px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .bo {
+        background: url(./heart_beat/bo.png) repeat-x ;
+        height: 258px;
+        width: 10000%;
+        position: absolute;
+        left: 0;
+      }
+
+      .ye {
+        background: url(./heart_beat/yellow-line.png) repeat-x;
+        height: 258px;
+        width: 100px;
+        border: 1px red solid;
+        background-position: 0;
+        position: absolute;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="bk">
+      <div class="bo">
+        <div class="ye"></div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+      var bo = document.getElementsByClassName('bo')[0];
+      var ye = document.getElementsByClassName('ye')[0];
+      var coo = 0;
+      setInterval(function(){
+        console.log(window.innerWidth);
+
+        bo.style.left = bo.offsetLeft - 2 + 'px';
+        ye.style.left = ye.offsetLeft + 10  + 'px';
+        ye.style.backgroundPosition = '-' + ye.offsetLeft  + 'px';
+        console.log(ye.style.backgroundPosition);
+        if(-parseInt(ye.style.backgroundPosition) >= -bo.offsetLeft + window.innerWidth){
+          ye.style.left = -bo.offsetLeft+ 'px';
+        }
+      }, 50);
+    </script>
+  </body>
+</html>
