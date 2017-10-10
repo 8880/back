@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .bk1 {
+        height: 962px;
+        background-color: #222;
+      }
+
+      .bk2 {
+        height: 962px;
+        background-color: #543;
+      }
+
+      .bk3 {
+        height: 962px;
+        background-color: #123456;
+      }
+
+      .bk4 {
+        height: 962px;
+        background-color: #777;
+      }
+
+      .p1 {
+        height: 50px;
+        width: 50px;
+        background-color: #222;
+
+        position: fixed;
+        top: 200px;
+        left: 100px;
+        cursor: pointer;
+      }
+
+      .p2 {
+        height: 50px;
+        width: 50px;
+        background-color: #543;
+
+        position: fixed;
+        top: 250px;
+        left: 100px;
+        cursor: pointer;
+      }
+
+      .p3 {
+        height: 50px;
+        width: 50px;
+        background-color: #123456;
+
+        position: fixed;
+        top: 300px;
+        left: 100px;
+        cursor: pointer;
+      }
+
+      .p4 {
+        height: 50px;
+        width: 50px;
+        background-color: #777;
+
+        position: fixed;
+        top: 350px;
+        left: 100px;
+        cursor: pointer;
+      }
+
+
+    </style>
+  </head>
+  <body>
+      <div class="bk1">屏幕1</div>
+      <div class="bk2">屏幕2</div>
+      <div class="bk3">屏幕3</div>
+      <div class="bk4">屏幕4</div>
+      <div id="ww">
+        <div class="p1">屏幕1</div>
+        <div class="p2">屏幕2</div>
+        <div class="p3">屏幕3</div>
+        <div class="p4">屏幕4</div>
+      </div>
+    <script type="text/javascript">
+      var ww = document.getElementById('ww');
+      var p1y = 0;
+      var p2y = 962;
+      var p3y = 1924;
+      var p4y = 2886;
+      // var current = 0;
+      var timer;
+
+      ww.onclick = function(e){
+        var target = e.target;
+
+        if (target.className == 'p1') {
+          clearInterval(timer);
+          timer = setInterval(function () {
+            var cur = 0
+            var tt = document.body.scrollTop;
+              current += (0 - tt)/10;
+              window.scrollTo(0, current);
+              if (current <= 1) {
+                window.scrollTo(0, 0);
+                clearInterval(timer);
+              }
+          }, 30);
+        } else if (target.className == 'p2') {
+          clearInterval(timer);
+          timer = setInterval(function () {
+            var cur = 962
+            if (current > 962) {
+              var tt = document.body.scrollTop;
+                current += (962 - tt)/10;
+                window.scrollTo(0, current);
+                if (current <= 963) {
+                  window.scrollTo(0, 962);
+                  clearInterval(timer);
+                }
+            }
+            if (current < 962) {
+              var tt = document.body.scrollTop;
+                current += (cur - tt)/10;
+                window.scrollTo(0, current);
+                if (current >= 961) {
+                  window.scrollTo(0, 962);
+                  clearInterval(timer);
+                }
+            }
+
+          }, 30);
+        } else if (target.className == 'p3') {
+          clearInterval(timer);
+          timer = setInterval(function () {
+            var cur = 1924
+            if (current > 1924) {
+              var tt = document.body.scrollTop;
+                current += (1924 - tt)/10;
+                window.scrollTo(0, current);
+                if (current <= 1923) {
+                  window.scrollTo(0, 1924);
+                  clearInterval(timer);
+                }
+            }
+            if (current < 1924) {
+              var tt = document.body.scrollTop;
+                current += (cur - tt)/10;
+                window.scrollTo(0, current);
+                if (current >= 1923) {
+                  window.scrollTo(0, 1924);
+                  clearInterval(timer);
+                }
+            }
+
+          }, 30);
+        } else {
+          clearInterval(timer);
+          timer = setInterval(function () {
+            var cur = 2886
+            var tt = document.body.scrollTop;
+              current += (cur - tt)/10;
+              window.scrollTo(0, current);
+              if (current >= 2885) {
+                window.scrollTo(0, 2886);
+                clearInterval(timer);
+              }
+          }, 30);
+        }
+        current = document.body.scrollTop;
+      }
+
+
+
+    </script>
+  </body>
+</html>
