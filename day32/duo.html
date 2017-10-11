@@ -8,79 +8,56 @@
         margin: 0;
         padding: 0;
       }
-
-      .bk1 {
+      .bb div{
         height: 962px;
-        background-color: #222;
+        color: orange;
+        font-size: 66px;
+        text-align: center;
       }
 
-      .bk2 {
-        height: 962px;
-        background-color: #543;
-      }
-
-      .bk3 {
-        height: 962px;
-        background-color: #123456;
-      }
-
-      .bk4 {
-        height: 962px;
-        background-color: #777;
+      #ww div{
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        cursor: pointer;
+        left: 100px;
+        border-radius: 50%;
+        font-size: 13px;
+        text-align: center;
+        line-height: 50px;
+        color: pink;
       }
 
       .p1 {
-        height: 50px;
-        width: 50px;
         background-color: #222;
-
-        position: fixed;
         top: 200px;
-        left: 100px;
-        cursor: pointer;
       }
 
       .p2 {
-        height: 50px;
-        width: 50px;
         background-color: #543;
-
-        position: fixed;
         top: 250px;
-        left: 100px;
-        cursor: pointer;
       }
 
       .p3 {
-        height: 50px;
-        width: 50px;
         background-color: #123456;
-
-        position: fixed;
         top: 300px;
-        left: 100px;
-        cursor: pointer;
       }
 
       .p4 {
-        height: 50px;
-        width: 50px;
         background-color: #777;
-
-        position: fixed;
         top: 350px;
-        left: 100px;
-        cursor: pointer;
       }
 
 
     </style>
   </head>
   <body>
-      <div class="bk1">屏幕1</div>
-      <div class="bk2">屏幕2</div>
-      <div class="bk3">屏幕3</div>
-      <div class="bk4">屏幕4</div>
+      <div class="bb">
+        <div class="bk1" style="background-color: #222;">屏幕1</div>
+        <div class="bk2" style="background-color: #543;">屏幕2</div>
+        <div class="bk3" style="background-color: #123456;">屏幕3</div>
+        <div class="bk4" style="background-color: #777;">屏幕4</div>
+      </div>
       <div id="ww">
         <div class="p1">屏幕1</div>
         <div class="p2">屏幕2</div>
@@ -89,11 +66,6 @@
       </div>
     <script type="text/javascript">
       var ww = document.getElementById('ww');
-      var p1y = 0;
-      var p2y = 962;
-      var p3y = 1924;
-      var p4y = 2886;
-      // var current = 0;
       var timer;
 
       ww.onclick = function(e){
@@ -174,7 +146,6 @@
         }
         current = document.body.scrollTop;
       }
-
 
 
     </script>

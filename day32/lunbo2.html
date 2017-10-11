@@ -26,9 +26,14 @@
         transition: 1s;
       }
 
-      #dian li {
+      #dian {
         position: absolute;
         bottom: 10px;
+        right: 0;
+      }
+
+      #dian li {
+        display: inline-block;
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -36,8 +41,7 @@
 
         transition: 1s;
         cursor: pointer;
-        right: 40px;
-        margin-right: 20px;
+        margin-right: 15px;
       }
 
       #tu li:nth-child(1){
@@ -45,21 +49,9 @@
       }
 
       #dian li:nth-child(1) {
-        right: 120px;
         background-color: red;
       }
-      #dian li:nth-child(2) {
-        right: 100px;
-      }
-      #dian li:nth-child(3) {
-        right: 80px;
-      }
-      #dian li:nth-child(4) {
-        right: 60px;
-      }
-      #dian li:nth-child(5) {
-        right: 40px;
-      }
+
 
 
     </style>
@@ -92,24 +84,28 @@
           a = 0
         }
         a++
-
-        $('#tu li:nth-child('+ a +')').css('opacity','1');
-        $('#tu li').not('#tu li:nth-child('+ a +')').css('opacity','0');
-
-        $('#dian li:nth-child('+a+')').css('background-color','red');
-        $('#dian li').not('#dian li:nth-child('+ a +')').css('background-color','#fff');
+        // 图片显示隐藏
+        $('#tu li:nth-child('+ a +')').css('opacity','1').siblings('li').css('opacity','0');
+        // 圆点显示隐藏
+        $('#dian li:nth-child('+a+')').css('background-color','red').siblings('li').css('background-color','#fff');
       }
 
       var timer = setInterval(hh, 2000);
 
+      // 圆点点击事件
       $('#dian li').click(function(){
         clearInterval(timer);
         a = $(this).index()+1;
-        $('#tu li:nth-child('+ a +')').css('opacity','1');
-        $('#tu li').not('#tu li:nth-child('+ a +')').css('opacity','0');
 
-        $('#dian li:nth-child('+ a +')').css('background-color','red');
-        $('#dian li').not('#dian li:nth-child('+ a +')').css('background-color','#fff');
+        $('#tu li:nth-child('+ a +')').css('opacity','1').siblings('li').css('opacity','0');
+        $('#dian li:nth-child('+ a +')').css('background-color','red').siblings('li').css('background-color','#fff');
+
+        timer = setInterval(hh, 2000);
+      });
+      //悬浮事件
+      $('#tu li').hover(function(){
+        clearInterval(timer);
+      }, function(){
         timer = setInterval(hh, 2000);
       });
 
