@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript">
+
+      var can = document.getElementById('canvas');
+
+      can.width = 800;
+      can.height = 800;
+      // can.style.border = '1px solid red';
+
+      var ct = can.getContext('2d');
+      ct.font = "40px 宋体"
+
+      ct.beginPath();
+      ct.fillStyle = 'yellow';
+      ct.moveTo(400, 400);
+      ct.arc(400, 400, 200, 0, Math.PI * 0.4, false);
+      ct.fillText("20%", 600, 520);
+      ct.fill();
+
+      ct.beginPath();
+      ct.fillStyle = 'red';
+      ct.moveTo(400, 400);
+      ct.arc(400, 400, 200, Math.PI * 0.4, Math.PI * 0.7, false);
+      ct.fillText("15%", 340, 650);
+      ct.fill();
+
+      ct.beginPath();
+      ct.fillStyle = 'blue';
+      ct.moveTo(400, 400);
+      ct.arc(400, 400, 200, Math.PI * 0.7, Math.PI * 1.3, false);
+      ct.fillText("30%", 100, 400);
+      ct.fill();
+
+      ct.beginPath();
+      ct.fillStyle = 'green';
+      ct.moveTo(400, 400);
+      ct.arc(400, 400, 200, Math.PI * 1.3, Math.PI * 2, false);
+      ct.fillText("35%", 550, 200);
+      ct.fill();
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script type="text/javascript">
+      var can = document.getElementById('canvas');
+      can.width = 800;
+      can.height = 800;
+      can.style.border = '1px solid red';
+      can.style.marginLeft = '500px';
+
+      var ct = can.getContext('2d');
+      var timer;
+      var a = 0;
+      var i = 0;
+
+      // for (var i = 0; i < 10; i++) {
+      //   var c1 = Math.floor(Math.random()*(256))
+      //   var c2 = Math.floor(Math.random()*(256))
+      //   var c3 = Math.floor(Math.random()*(256))
+      //   var v1 = Math.floor(Math.random()*(450 - 350 + 1)  +  350)
+      //   var v2 = Math.floor(Math.random()*(200 - 100 + 1)  +  100)
+      //   ct.beginPath();
+      //   ct.fillStyle = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+      //   ct.arc(v1, v2, 20, 0, Math.PI * 2, false);
+      //   ct.fill();
+      // }
+
+      timer = setInterval(function(){
+
+        // for (var i = 0; i < 10; i++) {
+        //   var c1 = Math.floor(Math.random()*(256))
+        //   var c2 = Math.floor(Math.random()*(256))
+        //   var c3 = Math.floor(Math.random()*(256))
+        //   var v1 = Math.floor(Math.random()*(450 - 350 + 1)  +  350)
+        //   var v2 = Math.floor(Math.random()*(200 - 100 + 1)  +  100)
+        //   ct.beginPath();
+        //   ct.fillStyle = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+        //   ct.arc(v1, v2, 20, 0, Math.PI * 2, false);
+        //   ct.fill();
+        // }
+
+        if (a == 0) {
+                  if (i == 680) {
+                    a = 1;
+                  }
+
+        i+=5;
+        can.width = can.width;
+        ct.beginPath();
+        ct.fillStyle = 'red';
+        ct.arc(450, 100 + i, 20, 0, Math.PI * 2, false);
+        ct.fill();
+        }
+
+        if (a == 1) {
+                  if (i == 100) {
+                    a = 0;
+                  }
+        i-=5;
+        can.width = can.width;
+        ct.beginPath();
+        ct.fillStyle = 'red';
+        ct.arc(450, 100 + i, 20, 0, Math.PI * 2, false);
+        ct.fill();
+        }
+
+      }, 10)
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+
+    <script type="text/javascript">
+      var can = document.getElementById('canvas');
+      can.width = 1861;
+      can.height = 958;
+
+
+      var ct = can.getContext('2d');
+      var timer;
+      var a = 0;
+      var i = 0;
+
+      // for (var i = 0; i < 10; i++) {
+      //   var c1 = Math.floor(Math.random()*(256))
+      //   var c2 = Math.floor(Math.random()*(256))
+      //   var c3 = Math.floor(Math.random()*(256))
+      //   var v1 = Math.floor(Math.random()*(450 - 350 + 1)  +  350)
+      //   var v2 = Math.floor(Math.random()*(200 - 100 + 1)  +  100)
+      //   ct.beginPath();
+      //   ct.fillStyle = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+      //   ct.arc(v1, v2, 20, 0, Math.PI * 2, false);
+      //   ct.fill();
+      // }
+
+      timer = setInterval(function(){
+
+        for (var i = 0; i < 5; i++) {
+          var c1 = Math.floor(Math.random()*(256))
+          var c2 = Math.floor(Math.random()*(256))
+          var c3 = Math.floor(Math.random()*(256))
+          var v1 = Math.floor(Math.random()*(1800))
+          var v2 = Math.floor(Math.random()*(950))
+          var v3 = Math.random()*2
+          var v4 = Math.floor(Math.random()*(40))
+          var v11 = Math.floor(Math.random()*(1800))
+          var v22 = Math.floor(Math.random()*(950))
+          var v5 = Math.floor(Math.random()*(3))
+
+
+
+        //   ct.beginPath();
+        //   ct.fillStyle = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+        //   ct.arc(v1, v2, v4, 0, Math.PI * v3, false);
+        //   ct.fill();
+        //
+        //   ct.beginPath();
+        //   ct.strokeStyle  = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+        //   ct.lineWidth = v5;
+        //   ct.moveTo(v1, v2);
+        //   ct.lineTo(v11, v22);
+        //   ct.stroke();
+
+
+          ct.beginPath();
+          ct.strokeStyle  = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+          // ct.lineWidth = v5;
+          ct.fillStyle = 'rgb(' + c1 +','+ c2+ ','+ c3 +')';
+
+          ct.moveTo(100, 100);
+          ct.lineTo(400, 100);
+          ct.lineTo(150, 300);
+          ct.lineTo(220, 20);
+          ct.lineTo(350, 300);
+          ct.lineTo(100, 100);
+          ct.fill()
+          ct.lineTo(v11, v22);
+
+
+          ct.stroke();
+
+        }
+
+        // if (a == 0) {
+        //           if (i == 680) {
+        //             a = 1;
+        //           }
+        //
+        // i+=5;
+        // can.width = can.width;
+        // ct.beginPath();
+        // ct.fillStyle = 'red';
+        // ct.arc(450, 100 + i, 20, 0, Math.PI * 2, false);
+        // ct.fill();
+        // }
+        //
+        // if (a == 1) {
+        //           if (i == 100) {
+        //             a = 0;
+        //           }
+        // i-=5;
+        // can.width = can.width;
+        // ct.beginPath();
+        // ct.fillStyle = 'red';
+        // ct.arc(450, 100 + i, 20, 0, Math.PI * 2, false);
+        // ct.fill();
+        // }
+
+      }, 100)
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <img id="img" src="./image/1.png" alt="" style="opacity:0">
+    <canvas id="canvas"></canvas>
+
+    <button id="front">front</button>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="back">back</button>
+
+    <script type="text/javascript">
+      var can = document.getElementById('canvas');
+      var img = document.getElementById("img");
+      var front = document.getElementById('front');
+      var left = document.getElementById('left');
+      var right = document.getElementById('right');
+      var back = document.getElementById('back');
+
+
+      can.width = 800;
+      can.height = 800;
+
+      can.style.border = "1px solid #666";
+      var ct = can.getContext('2d');
+      var timer;
+
+      var i = -40;
+      var j1 = 1;
+      var j2 = 0;
+      var j3 = 0;
+      var j4 = 1;
+
+      var j11 = 180;
+      var j22 = 205;
+      img.onload = function(){
+
+        function ft (){
+          if (i == 120) {
+            i = -40;
+          } else if(j1 == 506) {
+            j1 = 1;
+          } else if(j11 == 50) {
+            j11 = 180;
+            j22 = 205;
+          }
+
+          j1 += 5;
+          j11 -= 1;
+          j22 -= 1;
+          i += 40;
+
+          can.width = can.width;
+
+          ct.drawImage(img, i, 0, 40, 65, 300 , 300 + j1, 180, 205);
+
+        }
+
+        function lt (){
+          if (i == 120) {
+            i = -40;
+          }
+          if (j2 == 505) {
+            j2 = -300;
+          }
+
+          j2+=5
+          i+=40;
+
+          can.width = can.width;
+
+          ct.drawImage(img, i, 65, 40, 65, 300 - j2, 300, 180, 205);
+
+        }
+
+        function rt (){
+          if (i == 120) {
+            i = -40;
+          }
+          if (j3 == 505) {
+            j3 = -300;
+          }
+          j3+=5
+          i+=40;
+
+          can.width = can.width;
+
+          ct.drawImage(img, i, 130, 40, 65, 300 + j3, 300, 180, 205);
+
+        }
+
+        function bk (){
+          if (i == 120) {
+            i = -40;
+          }
+          if (j4 == 506) {
+            j4 = 1;
+          }
+          else if(j11 == 70) {
+            j11 = 180;
+            j22 = 205;
+          }
+          j4 += 5;
+          j11 -= 1;
+          j22 -= 1;
+          i += 40;
+
+          console.log(j11);
+          can.width = can.width;
+          ct.drawImage(img, i, 195, 40, 65, 300, 300 - j4, j11, j22);
+
+        }
+
+        timer = setInterval(ft, 100);
+
+        front.onclick = function(){
+          clearInterval(timer)
+          timer = setInterval(ft, 100);
+        }
+
+        left.onclick = function(){
+          clearInterval(timer)
+          timer = setInterval(lt, 100);
+        }
+
+        right.onclick = function(){
+          clearInterval(timer)
+          timer = setInterval(rt, 100);
+        }
+
+        back.onclick = function(){
+          clearInterval(timer)
+          timer = setInterval(bk, 100);
+        }
+
+      }
+
+
+    </script>
+  </body>
+</html>
