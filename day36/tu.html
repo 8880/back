@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        border: 1px solid gray;
+        width: 400px;
+        margin: auto;
+      }
+      .box div{
+        width: 300px;
+        height: 50px;
+        margin: 50px;
+        text-align: center;
+        font-size: 35px;
+        color: #fff;
+        line-height: 50px;
+      }
+
+      .b1 {
+        background-color: red;
+      }
+      .b2 {
+        background-color: blue;
+      }
+      .b3 {
+        background-color: pink;
+      }
+      .b4 {
+        background-color: cyan;
+      }
+      .b5 {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <div class="b1" draggable="true" data-name=1>111</div>
+      <div class="b2" draggable="true" value='2'>222</div>
+      <div class="b3" draggable="true" value='3'>333</div>
+      <div class="b4" draggable="true" value='4'>444</div>
+      <div class="b5" draggable="true" value='5'>555</div>
+    </div>
+
+    <script type="text/javascript">
+      var box = document.querySelector('.box');
+      var gg, hh, ct;
+
+      for (var i = 0; i < box.children.length; i++) {
+        box.children[i].index = i
+        box.children[i].addEventListener('dragover', function(event){
+          event.stopPropagation();
+          event.preventDefault();
+        }, false);
+
+        box.children[i].addEventListener('drag', function(e){
+          gg = e.target
+  console.log(gg.getAttribute('name'));
+        }, false);
+
+        box.children[i].addEventListener('drop', function(){
+
+          if (gg.nextElementSibling == event.target) {
+            hh = gg.className;
+            ct = gg.innerHTML;
+            gg.className = event.target.className;
+            event.target.className = hh;
+            gg.innerHTML = event.target.innerHTML;
+            event.target.innerHTML = ct;
+          }
+
+          box.insertBefore(gg, event.target);
+
+        }, false);
+
+      }
+
+
+    </script>
+  </body>
+</html>
